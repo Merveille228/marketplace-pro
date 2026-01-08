@@ -3,8 +3,9 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Sellers from "./pages/Sellers";
 import SellerProfile from "./pages/SellerProfile";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Categories from "./pages/Categories";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sellers" element={<Sellers />} />
         <Route path="/sellers/:id" element={<SellerProfile />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
 
     

@@ -1,12 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Header from "./Header";
 import {
   Home,
   User,
-  ShoppingCart,
   Phone,
-  Info,
   Store,
   Layers
 } from "lucide-react";
@@ -61,19 +59,6 @@ function NavBar() {
             </NavLink>
           </li>
 
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "flex gap-1 font-bold text-blue-700"
-                  : "flex gap-1 hover:text-blue-700"
-              }
-            >
-              <Info className="w-5" />
-              About Us
-            </NavLink>
-          </li>
 
           <li>
             <NavLink
@@ -91,17 +76,13 @@ function NavBar() {
         </ul>
 
         <div className="flex gap-5">
-          <div className="w-9 h-9 rounded-full border p-0.5 flex items-center justify-center bg-blue-100 border-blue-500 text-blue-500 hover:bg-blue-700 hover:text-white cursor-pointer">
-            <User className="w-6" />
-          </div>
+          <Link to={"/SellerProfile"}><div className="w-9 h-9 rounded-full border p-0.5 flex items-center justify-center bg-blue-100 border-blue-500 text-blue-500 hover:bg-blue-700 hover:text-white cursor-pointer">
+            <User className="w-6" /> 
+          </div></Link>
 
-          <div className="w-9 h-9 rounded-full border flex items-center justify-center bg-blue-100 border-blue-500 text-blue-500 hover:bg-blue-700 hover:text-white cursor-pointer">
-            <ShoppingCart className="w-6" />
-          </div>
-
-          <button className="rounded-md font-semibold px-3 py-1 bg-blue-100 border border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white">
+         <Link to="/Login"> <button className="rounded-md font-semibold px-3 py-1 bg-blue-100 border border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white">
             Connexion
-          </button>
+          </button></Link>
         </div>
       </nav>
 
@@ -150,20 +131,6 @@ function NavBar() {
             >
               <Store className="w-6" />
               <span>Sellers</span>
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `flex flex-col items-center gap-1 ${
-                  isActive ? "text-blue-700" : "text-gray-600"
-                }`
-              }
-            >
-              <Info className="w-6" />
-              <span>About</span>
             </NavLink>
           </li>
 

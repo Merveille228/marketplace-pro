@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function Sellers() {
-    return (
-        <div className="py-30">JEANjakk's part</div>
-    )
+  return <div className="py-30">Salut mes Nakama</div>;
 }
 
-export default Sellers
+export default Sellers;

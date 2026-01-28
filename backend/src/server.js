@@ -1,12 +1,9 @@
-const pool = require('./db');
+const user = require('./repositories/user.repository');
 
-async function testDB() {
-  try {
-    const result = await pool.query('SELECT NOW()');
-    console.log('🕒 Heure PostgreSQL :', result.rows[0]);
-  } catch (err) {
-    console.error('❌ Requête échouée', err);
-  }
+async function start() {
+  const utilisateurs = await user.findAllUsers();
+  console.log('👤 Utilisateurs trouvés :');
+  console.log(utilisateurs);
 }
 
-testDB();
+start();
